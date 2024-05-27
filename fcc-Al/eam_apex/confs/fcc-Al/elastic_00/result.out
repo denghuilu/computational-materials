@@ -1,0 +1,12 @@
+/tmp/tmplsa6jtaf/eam-apex-joint-k0f95/confs/fcc-Al-elastic-00--post/workdir/tmp/inputs/artifacts/input_all/tmp/tmpj3mjn4bv/confs/fcc-Al/elastic_00
+ 105.07   69.90   69.90    0.00    0.00    0.00 
+  69.90  105.07   69.90    0.00    0.00    0.00 
+  69.90   69.90  105.07    0.00    0.00    0.00 
+   0.00    0.00    0.00   44.15    0.00    0.00 
+   0.00    0.00    0.00    0.00   44.15    0.00 
+   0.00    0.00    0.00    0.00    0.00   44.15 
+# Bulk   Modulus BV = 81.62 GPa
+# Shear  Modulus GV = 33.53 GPa
+# Youngs Modulus EV = 88.47 GPa
+# Poission Ratio uV = 0.32
+ 

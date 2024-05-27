@@ -1,0 +1,165 @@
+                                                                                     
+                              ABACUS v3.6.3
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: f9124675f (Wed May 22 09:49:08 2024 +0800)
+
+ Sun May 26 13:55:48 2024
+ MAKE THE DIR         : OUT.ABACUS/
+ RUNNING WITH DEVICE  : GPU / NVIDIA GeForce RTX 4090
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: the number of valence electrons in pseudopotential > 3 for Al: [Ne] 3s2 3p1
+ Pseudopotentials with additional electrons can yield (more) accurate outcomes, but may be less efficient.
+ If you're confident that your chosen pseudopotential is appropriate, you can safely ignore this warning.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ UNIFORM GRID DIM        : 48 * 45 * 48
+ UNIFORM GRID DIM(BIG)   : 48 * 45 * 48
+ DONE(4.18186    SEC) : SETUP UNITCELL
+ DONE(4.29641    SEC) : SYMMETRY
+ DONE(4.49878    SEC) : INIT K-POINTS
+ ---------------------------------------------------------
+ Ion relaxation calculations
+ ---------------------------------------------------------
+ SPIN    KPOINTS         PROCESSORS  
+ 1       126             2           
+ ---------------------------------------------------------
+ Use plane wave basis
+ ---------------------------------------------------------
+ ELEMENT NATOM       XC          
+ Al      4           
+ ---------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ---------------------------------------------------------
+ DONE(4.5796     SEC) : INIT PLANEWAVE
+ MEMORY FOR PSI (MB)  : 198.505
+ DONE(4.62638    SEC) : LOCAL POTENTIAL
+ DONE(4.66326    SEC) : NON-LOCAL POTENTIAL
+ DONE(4.94427    SEC) : INIT BASIS
+ -------------------------------------------
+ STEP OF RELAXATION : 1
+ -------------------------------------------
+ START CHARGE      : atomic
+ DONE(5.09369    SEC) : INIT SCF
+ ITER   ETOT(eV)       EDIFF(eV)      DRHO       TIME(s)    
+ CG1    -7.532948e+03  0.000000e+00   6.747e-02  2.589e+01  
+ CG2    -7.532689e+03  2.586077e-01   3.149e-02  3.750e+00  
+ CG3    -7.532772e+03  -8.246653e-02  6.584e-04  4.392e+00  
+ CG4    -7.532773e+03  -1.320688e-03  6.338e-04  5.456e+00  
+ CG5    -7.532774e+03  -7.634371e-04  1.128e-05  4.580e+00  
+ CG6    -7.532774e+03  -3.075801e-04  2.477e-05  6.187e+00  
+ CG7    -7.532774e+03  9.987978e-05   1.675e-05  3.600e+00  
+ CG8    -7.532774e+03  1.464938e-05   3.928e-06  3.608e+00  
+ CG9    -7.532774e+03  -8.978088e-06  7.341e-07  3.869e+00  
+ CG10   -7.532774e+03  -8.686859e-07  7.281e-07  3.895e+00  
+ CG11   -7.532774e+03  3.551582e-06   6.649e-07  3.584e+00  
+ CG12   -7.532774e+03  5.719221e-07   2.043e-07  3.596e+00  
+ CG13   -7.532774e+03  5.262237e-07   9.022e-08  3.643e+00  
+ CG14   -7.532774e+03  -2.331583e-07  1.692e-09  4.414e+00  
+----------------------------------------------------------------
+TOTAL-STRESS (KBAR)                                           
+----------------------------------------------------------------
+        3.5963492685        -0.0000000000         0.0000000000
+       -0.0000000000         4.7957189469        -0.0000000000
+        0.0000000000        -0.0000000000         3.5963492685
+----------------------------------------------------------------
+ TOTAL-PRESSURE: 3.996139 KBAR
+
+ ETOT DIFF (eV)       : 0.000000
+ LARGEST GRAD (eV/A)  : 0.000000
+TIME STATISTICS
+-------------------------------------------------------------------------------------
+     CLASS_NAME                 NAME             TIME(Sec)  CALLS   AVG(Sec) PER(%)
+-------------------------------------------------------------------------------------
+                     total                        90.15          17   5.30   100.00
+Driver               reading                       0.38           1   0.38     0.42
+Input                Init                          0.01           1   0.01     0.01
+Input_Conv           Convert                       0.36           1   0.36     0.40
+Driver               driver_line                  89.77           1  89.77    99.58
+UnitCell             check_tau                     0.00           1   0.00     0.00
+PW_Basis_Sup         setuptransform                0.03           1   0.03     0.04
+PW_Basis_Sup         distributeg                   0.00           1   0.00     0.00
+mymath               heapsort                      0.01         165   0.00     0.01
+Symmetry             analy_sys                     0.00           1   0.00     0.00
+PW_Basis_K           setuptransform                0.04           1   0.04     0.05
+PW_Basis_K           distributeg                   0.00           1   0.00     0.00
+PW_Basis             setup_struc_factor            0.01           1   0.01     0.01
+ppcell_vnl           init                          0.00           1   0.00     0.00
+ppcell_vl            init_vloc                     0.03           1   0.03     0.03
+ppcell_vnl           init_vnl                      0.04           1   0.04     0.04
+WF_atomic            init_at_1                     0.00           1   0.00     0.00
+wavefunc             wfcinit                       0.11           1   0.11     0.12
+Ions                 opt_ions                     85.16           1  85.16    94.47
+ESolver_KS_PW        run                          81.45           1  81.45    90.35
+H_Ewald_pw           compute_ewald                 0.00           1   0.00     0.00
+Charge               set_rho_core                  0.00           1   0.00     0.00
+Charge               atomic_rho                    0.07           2   0.03     0.07
+PW_Basis_Sup         recip2real                    0.39         110   0.00     0.43
+PW_Basis_Sup         gathers_scatterp              0.05         110   0.00     0.06
+Potential            init_pot                      0.09           1   0.09     0.10
+Potential            update_from_charge            1.24          15   0.08     1.38
+Potential            cal_fixed_v                   0.00           1   0.00     0.00
+PotLocal             cal_fixed_v                   0.00           1   0.00     0.00
+Potential            cal_v_eff                     1.23          15   0.08     1.36
+H_Hartree_pw         v_hartree                     0.14          15   0.01     0.16
+PW_Basis_Sup         real2recip                    0.48         142   0.00     0.53
+PW_Basis_Sup         gatherp_scatters              0.05         142   0.00     0.05
+PotXC                cal_v_eff                     1.08          15   0.07     1.19
+XC_Functional        v_xc                          1.07          15   0.07     1.19
+Potential            interpolate_vrs               0.00          15   0.00     0.01
+Symmetry             rhog_symmetry                 0.17          16   0.01     0.18
+Symmetry             group fft grids               0.04          16   0.00     0.04
+Charge_Mixing        init_mixing                   0.00           1   0.00     0.00
+ESolver_KS_PW        hamilt2density               79.04          15   5.27    87.67
+HSolverPW            solve                        78.69          15   5.25    87.29
+Nonlocal             getvnl                        2.43         945   0.00     2.70
+pp_cell_vnl          getvnl                        2.72        1071   0.00     3.02
+Structure_Factor     get_sk                        0.40        2331   0.00     0.44
+WF_atomic            atomic_wfc                    0.04          63   0.00     0.04
+DiagoIterAssist      diagH_subspace_init           2.66          63   0.04     2.95
+Operator             hPsi                         22.15       97413   0.00    24.57
+Operator             EkineticPW                    1.39       97413   0.00     1.54
+Operator             VeffPW                       16.01       97413   0.00    17.76
+PW_Basis_K           recip_to_real gpu             9.70      154995   0.00    10.76
+PW_Basis_K           real_to_recip gpu             6.93      124755   0.00     7.69
+Operator             NonlocalPW                    4.59       97413   0.00     5.09
+Nonlocal             add_nonlocal_pp               2.42       97413   0.00     2.69
+DiagoIterAssist      diagH_LAPACK                  1.85         882   0.00     2.06
+DiagoCG              diag_once                    42.36         945   0.04    46.99
+DiagoCG_New          spsi_func                     1.40      193062   0.00     1.56
+DiagoCG_New          hpsi_func                    19.25       96531   0.00    21.35
+ElecStatePW          psiToRho                      2.73          15   0.18     3.03
+Charge               rho_mpi                       0.02          15   0.00     0.02
+Charge               reduce_diff_pools             0.02          15   0.00     0.02
+Charge_Mixing        get_drho                      0.11          15   0.01     0.12
+Charge_Mixing        inner_product_recip_rho       0.00          15   0.00     0.00
+Charge               mix_rho                       0.14          13   0.01     0.16
+Charge               Pulay_mixing                  0.02          13   0.00     0.02
+Charge_Mixing        inner_product_recip_hartree   0.02          76   0.00     0.02
+DiagoIterAssist      diagH_subspace               10.15         819   0.01    11.26
+Forces               cal_force_loc                 0.01           1   0.01     0.01
+Forces               cal_force_ew                  0.00           1   0.00     0.01
+Forces               cal_force_nl                  0.18           1   0.18     0.20
+Forces               cal_force_cc                  0.00           1   0.00     0.00
+Forces               cal_force_scc                 0.04           1   0.04     0.04
+Stress_PW            cal_stress                    3.48           1   3.48     3.86
+Stress_Func          stress_kin                    0.17           1   0.17     0.18
+Stress_Func          stress_har                    0.00           1   0.00     0.01
+Stress_Func          stress_ewa                    0.00           1   0.00     0.00
+Stress_Func          stress_gga                    0.04           1   0.04     0.04
+Stress_Func          stress_loc                    0.04           1   0.04     0.05
+Stress_Func          stress_cc                     0.00           1   0.00     0.00
+Stress_Func          stress_nl                     3.22           1   3.22     3.58
+ModuleIO             write_istate_info             0.01           1   0.01     0.01
+-------------------------------------------------------------------------------------
+
+ START  Time  : Sun May 26 13:55:48 2024
+ FINISH Time  : Sun May 26 13:57:19 2024
+ TOTAL  Time  : 91
+ SEE INFORMATION IN : OUT.ABACUS/

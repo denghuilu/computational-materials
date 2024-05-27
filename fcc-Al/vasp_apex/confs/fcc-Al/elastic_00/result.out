@@ -1,0 +1,12 @@
+/tmp/tmp94dcbzsl/vasp-apex-joint-r4qhb/confs/fcc-Al-elastic-00--post/workdir/tmp/inputs/artifacts/input_all/tmp/tmpa3sb6uz4/confs/fcc-Al/elastic_00
+ 140.63   49.84   49.84    0.00    0.00    0.00 
+  49.84  140.63   49.84    0.00    0.00    0.00 
+  49.84   49.84  140.63    0.00    0.00    0.00 
+   0.00    0.00    0.00   40.14    0.00    0.00 
+   0.00   -0.00    0.00    0.00   40.14    0.00 
+   0.00    0.00    0.00    0.00    0.00   40.14 
+# Bulk   Modulus BV = 80.11 GPa
+# Shear  Modulus GV = 42.24 GPa
+# Youngs Modulus EV = 107.78 GPa
+# Poission Ratio uV = 0.28
+ 

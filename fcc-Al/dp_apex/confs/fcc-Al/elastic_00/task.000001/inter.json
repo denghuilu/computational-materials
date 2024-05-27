@@ -1,0 +1,7 @@
+{
+    "type": "deepmd",
+    "model": "AlMgCu.pb",
+    "type_map": {
+        "Al": 0
+    }
+}

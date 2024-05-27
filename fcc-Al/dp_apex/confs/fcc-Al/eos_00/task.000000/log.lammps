@@ -1,0 +1,178 @@
+LAMMPS (2 Aug 2023 - Update 2)
+clear
+units 	metal
+dimension	3
+boundary	p p p
+atom_style	atomic
+box         tilt large
+
+The 'box' command has been removed and will be ignored
+
+read_data   conf.lmp
+Reading data file ...
+  triclinic box = (0 0 0) to (3.4048836 3.4048836 3.4048836) with tilt (-0 -0 -0)
+  1 by 2 by 7 MPI processor grid
+  reading atoms ...
+  4 atoms
+  read_data CPU = 0.003 seconds
+mass            1 26.982
+neigh_modify    every 1 delay 0 check no
+pair_style deepmd AlMgCu.pb
+Summary of lammps deepmd module ...
+  >>> Info of deepmd-kit:
+  installed to:       /home/denghui/deepmd-kit/deepmd-root
+  source:             v3.0.0a0-119-g41dc57ec
+  source branch:      HEAD
+  source commit:      41dc57ec
+  source commit at:   2024-04-20 02:41:16 +0000
+  support model ver.: 1.1 
+  build variant:      cuda
+  build with tf inc:  /home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/include;/home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/include
+  build with tf lib:  /home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+  set tf intra_op_parallelism_threads: 0
+  set tf inter_op_parallelism_threads: 0
+  >>> Info of lammps module:
+  use deepmd-kit at:  /home/denghui/deepmd-kit/deepmd-root
+  source:             v3.0.0a0-119-g41dc57ec
+  source branch:      HEAD
+  source commit:      41dc57ec
+  source commit at:   2024-04-20 02:41:16 +0000
+  build float prec:   double
+  build with tf inc:  /home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/include;/home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/include
+  build with tf lib:  /home/denghui/deepmd-kit/venv/lib/python3.10/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+pair_coeff * * Al
+compute         mype all pe
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz lx ly lz vol c_mype
+dump            1 all custom 100 dump.relax id type xs ys zs fx fy fz
+min_style       cg
+minimize        0.000000e+00 1.000000e-10 5000 500000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- USER-DEEPMD package:
+
+@article{Wang_ComputPhysCommun_2018_v228_p178,
+  author = {Wang, Han and Zhang, Linfeng and Han, Jiequn and E, Weinan},
+  doi = {10.1016/j.cpc.2018.03.016},
+  url = {https://doi.org/10.1016/j.cpc.2018.03.016},
+  year = 2018,
+  month = {jul},
+  publisher = {Elsevier {BV}},
+  volume = 228,
+  journal = {Comput. Phys. Commun.},
+  title = {{DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics}},
+  pages = {178--184}
+}
+@misc{Zeng_JChemPhys_2023_v159_p054801,
+  title  = {{DeePMD-kit v2: A software package for deep potential models}},
+  author =   {Jinzhe Zeng and Duo Zhang and Denghui Lu and Pinghui Mo and Zeyu Li
+         and Yixiao Chen and Mari{\'a}n Rynik and Li'ang Huang and Ziyao Li and 
+         Shaochen Shi and Yingze Wang and Haotian Ye and Ping Tuo and Jiabin
+         Yang and Ye Ding and Yifan Li and Davide Tisi and Qiyu Zeng and Han 
+         Bao and Yu Xia and Jiameng Huang and Koki Muraoka and Yibo Wang and 
+         Junhan Chang and Fengbo Yuan and Sigbj{\o}rn L{\o}land Bore and Chun
+         Cai and Yinnian Lin and Bo Wang and Jiayan Xu and Jia-Xin Zhu and 
+         Chenxing Luo and Yuzhi Zhang and Rhys E A Goodall and Wenshuo Liang
+         and Anurag Kumar Singh and Sikai Yao and Jingchao Zhang and Renata
+         Wentzcovitch and Jiequn Han and Jie Liu and Weile Jia and Darrin M
+         York and Weinan E and Roberto Car and Linfeng Zhang and Han Wang},
+  journal =  {J. Chem. Phys.},
+  volume =   159,
+  issue =    5,  
+  year =    2023,
+  pages  =   054801,
+  doi =      {10.1063/5.0155600},
+}
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 5.5, bins = 1 1 1
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair deepmd, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Proc sub-domain size < neighbor skin, could lead to lost atoms (../domain.cpp:966)
+Per MPI rank memory allocation (min/avg/max) = 3.826 | 3.827 | 3.828 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
+         0  -10.407349      700321.36      700321.36      700321.36     -8.0421319e-13  4.9506968e-13  2.693179e-12   3.4048836      3.4048836      3.4048836      39.473608     -10.407349    
+         1  -10.407349      700321.36      700321.36      700321.36     -8.0421319e-13  4.9506968e-13  2.693179e-12   3.4048836      3.4048836      3.4048836      39.473608     -10.407349    
+Loop time of 3.85241 on 14 procs for 1 steps with 4 atoms
+
+98.2% CPU use with 14 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = quadratic factors are zero
+  Energy initial, next-to-last, final = 
+     -10.4073487378806  -10.4073487378806  -10.4073487378806
+  Force two-norm initial, final = 9.9040256e-16 9.9040256e-16
+  Force max component initial, final = 7.2489757e-16 7.2489757e-16
+  Final line search alpha, max atom move = 1 7.2489757e-16
+  Iterations, force evaluations = 1 2
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.0017052  | 0.28285    | 3.8243     | 184.7 |  7.34
+Neigh   | 0.00018676 | 0.00021468 | 0.00025699 |   0.0 |  0.01
+Comm    | 0.026881   | 2.4789     | 3.8492     | 115.7 | 64.35
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 1.09       |            |       | 28.31
+
+Nlocal:       0.285714 ave           1 max           0 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+Nghost:        1394.71 ave        1470 max        1364 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 14 0 0 0 0 0 0 0 0 0
+FullNghs:      158.286 ave         554 max           0 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+
+Total # of neighbors = 2216
+Ave neighs/atom = 554
+Neighbor list builds = 3
+Dangerous builds not checked
+variable        N equal count(all)
+variable        V equal vol
+variable        E equal "c_mype"
+variable        tmplx equal lx
+variable        tmply equal ly
+variable        Pxx equal pxx
+variable        Pyy equal pyy
+variable        Pzz equal pzz
+variable        Pxy equal pxy
+variable        Pxz equal pxz
+variable        Pyz equal pyz
+variable        Epa equal ${E}/${N}
+variable        Epa equal -10.4073487378806/${N}
+variable        Epa equal -10.4073487378806/4
+variable        Vpa equal ${V}/${N}
+variable        Vpa equal 39.473608243649/${N}
+variable        Vpa equal 39.473608243649/4
+variable        AA equal (${tmplx}*${tmply})
+variable        AA equal (3.4048836464*${tmply})
+variable        AA equal (3.4048836464*3.4048836464)
+print "All done"
+All done
+print "Total number of atoms = ${N}"
+Total number of atoms = 4
+print "Final energy per atoms = ${Epa}"
+Final energy per atoms = -2.60183718447015
+print "Final volume per atoms = ${Vpa}"
+Final volume per atoms = 9.86840206091225
+print "Final Base area = ${AA}"
+Final Base area = 11.5932326455222
+print "Final Stress (xx yy zz xy xz yz) = ${Pxx} ${Pyy} ${Pzz} ${Pxy} ${Pxz} ${Pyz}"
+Final Stress (xx yy zz xy xz yz) = 700321.3646326 700321.3646326 700321.3646326 -8.04213185977316e-13 4.95069676730222e-13 2.69317904141241e-12
+Total wall time: 0:00:14

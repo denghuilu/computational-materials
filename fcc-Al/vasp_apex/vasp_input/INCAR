@@ -1,0 +1,18 @@
+SYSTEM = Al fcc relaxation
+PREC = Accurate
+ENCUT = 400              # Energy cutoff, you can use a higher value based on your POTCAR
+EDIFF = 1E-6             # Energy convergence criterion
+ISMEAR = 1               # Smearing method, 1 for metals
+SIGMA = 0.2              # Smearing width (default is usually fine for metals)
+IBRION = 2               # Ionic relaxation method (2 = conjugate gradient)
+NSW = 100                # Maximum number of ionic steps
+ISIF = 3                 # Relaxation of both ions and cell shape/volume
+LREAL = Auto             # Projection operators, Auto for large systems
+LWAVE = .FALSE.          # Write WAVECAR file
+LCHARG = .FALSE.         # Write CHGCAR file
+KSPACING = 0.08          # K-point spacing,you can use a higher value based on your POTCAR
+
+# Optional settings for better convergence and accuracy
+NELM = 60                # Maximum number of electronic SCF steps
+NELMIN = 4               # Minimum number of electronic SCF steps
+ALGO = Fast              # Algorithm for electronic minimization

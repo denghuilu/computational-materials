@@ -1,0 +1,8 @@
+SYSTEM = Al atom
+ISTART = 0
+ICHARG = 2
+ENCUT = 400
+ISMEAR = 0
+SIGMA = 0.01
+EDIFF = 1E-6
+LREAL = Auto

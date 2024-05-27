@@ -1,0 +1,18 @@
+{
+    "machine": {
+        "batch_type": "Slurm",
+        "context_type": "local",
+        "local_root" : "./",
+        "remote_root": "/home/denghui/deepmd-kit/computational-materials/fcc-Al/vasp_apex"
+    },
+    "resources":{
+        "number_node": 1,
+        "cpu_per_node": 56,
+        "gpu_per_node": 2,
+        "group_size": 1,
+        "custom_flags": [
+    	    "#SBATCH --partition=LuDh-4090"
+        ]
+    },
+    "vasp_run_command": "OMP_NUM_THREADS=2 mpirun -n 14 /home/denghui/deepmd-kit/vasp.6.4.2/bin/vasp_std"
+}

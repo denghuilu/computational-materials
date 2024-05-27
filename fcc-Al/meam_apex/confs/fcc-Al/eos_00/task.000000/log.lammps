@@ -1,0 +1,118 @@
+LAMMPS (2 Aug 2023 - Update 2)
+clear
+units 	metal
+dimension	3
+boundary	p p p
+atom_style	atomic
+box         tilt large
+
+The 'box' command has been removed and will be ignored
+
+read_data   conf.lmp
+Reading data file ...
+  triclinic box = (0 0 0) to (3.4159014 3.4159014 3.4159014) with tilt (0 0 0)
+  1 by 2 by 7 MPI processor grid
+  reading atoms ...
+  4 atoms
+  read_data CPU = 0.003 seconds
+mass            1 26.982
+neigh_modify    every 1 delay 0 check no
+pair_style      meam
+pair_coeff      * * library-Al.meam Al Al.meam Al
+compute         mype all pe
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz lx ly lz vol c_mype
+dump            1 all custom 100 dump.relax id type xs ys zs fx fy fz
+min_style       cg
+minimize        0.000000e+00 1.000000e-10 5000 500000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  binsize = 3.5, bins = 1 1 1
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair meam, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) pair meam, perpetual, half/full from (1)
+      attributes: half, newton on
+      pair build: halffull/newton
+      stencil: none
+      bin: none
+WARNING: Proc sub-domain size < neighbor skin, could lead to lost atoms (../domain.cpp:966)
+Per MPI rank memory allocation (min/avg/max) = 9.261 | 9.262 | 9.264 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
+         0  -6.1695587      1451191.2      1451191.2      1451191.2      3.570217e-11   1.6065976e-10  7.140434e-11   3.4159014      3.4159014      3.4159014      39.858042     -6.1695587    
+         1  -6.1695587      1451191.2      1451191.2      1451191.2     -7.1435492e-11 -8.4415122e-11 -1.1328868e-10  3.4159014      3.4159014      3.4159014      39.858042     -6.1695587    
+Loop time of 0.00525386 on 14 procs for 1 steps with 4 atoms
+
+90.5% CPU use with 14 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = force tolerance
+  Energy initial, next-to-last, final = 
+     -6.16955874621215  -6.16955874621215  -6.16955874621216
+  Force two-norm initial, final = 1.2637345e-08 2.9150491e-14
+  Force max component initial, final = 3.6480878e-09 1.5543122e-14
+  Final line search alpha, max atom move = 1 1.5543122e-14
+  Iterations, force evaluations = 1 2
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.0036062  | 0.0036738  | 0.0037704  |   0.1 | 69.93
+Neigh   | 4.8068e-05 | 7.2584e-05 | 0.00011261 |   0.0 |  1.38
+Comm    | 0.0008832  | 0.0010197  | 0.0010811  |   0.2 | 19.41
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.0004877  |            |       |  9.28
+
+Nlocal:       0.285714 ave           1 max           0 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+Nghost:        463.286 ave         495 max         440 min
+Histogram: 8 0 0 0 0 0 0 0 0 6
+Neighs:             20 ave          70 max           0 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+FullNghs:           40 ave         140 max           0 min
+Histogram: 10 0 0 0 0 0 0 0 0 4
+
+Total # of neighbors = 560
+Ave neighs/atom = 140
+Neighbor list builds = 3
+Dangerous builds not checked
+variable        N equal count(all)
+variable        V equal vol
+variable        E equal "c_mype"
+variable        tmplx equal lx
+variable        tmply equal ly
+variable        Pxx equal pxx
+variable        Pyy equal pyy
+variable        Pzz equal pzz
+variable        Pxy equal pxy
+variable        Pxz equal pxz
+variable        Pyz equal pyz
+variable        Epa equal ${E}/${N}
+variable        Epa equal -6.16955874621216/${N}
+variable        Epa equal -6.16955874621216/4
+variable        Vpa equal ${V}/${N}
+variable        Vpa equal 39.8580421381369/${N}
+variable        Vpa equal 39.8580421381369/4
+variable        AA equal (${tmplx}*${tmply})
+variable        AA equal (3.4159013557*${tmply})
+variable        AA equal (3.4159013557*3.4159013557)
+print "All done"
+All done
+print "Total number of atoms = ${N}"
+Total number of atoms = 4
+print "Final energy per atoms = ${Epa}"
+Final energy per atoms = -1.54238968655304
+print "Final volume per atoms = ${Vpa}"
+Final volume per atoms = 9.96451053453423
+print "Final Base area = ${AA}"
+Final Base area = 11.6683820718731
+print "Final Stress (xx yy zz xy xz yz) = ${Pxx} ${Pyy} ${Pzz} ${Pxy} ${Pxz} ${Pyz}"
+Final Stress (xx yy zz xy xz yz) = 1451191.19263507 1451191.19263507 1451191.19263507 -7.1435492149656e-11 -8.44151219472701e-11 -1.13288675591093e-10
+Total wall time: 0:00:00

@@ -1,0 +1,23 @@
+# LAMMPS Input Script for Calculating the Energy of a Single Isolated Aluminum Atom
+
+units metal
+atom_style atomic
+
+# Create a single atom
+region box block 0 10 0 10 0 10
+create_box 1 box
+create_atoms 1 single 5.0 5.0 5.0
+
+# Define interatomic potential (EAM for Aluminum)
+pair_style deepmd AlMgCu.pb
+pair_coeff * * Al
+
+# Define settings
+mass 1 26.9815  # Atomic mass of aluminum
+
+# Compute energy
+run 0
+
+# Output energy
+variable energy equal pe
+print "The energy of the isolated aluminum atom is ${energy} eV"

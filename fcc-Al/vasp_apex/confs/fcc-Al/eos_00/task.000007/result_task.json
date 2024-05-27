@@ -1,0 +1,171 @@
+{
+    "@module": "dpdata.system",
+    "@class": "LabeledSystem",
+    "data": {
+        "atom_numbs": [
+            4
+        ],
+        "atom_names": [
+            "Al"
+        ],
+        "atom_types": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "int64",
+            "data": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "orig": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "int64",
+            "data": [
+                0,
+                0,
+                0
+            ]
+        },
+        "cells": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        3.97046003,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        3.97046003,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        3.97046003
+                    ]
+                ]
+            ]
+        },
+        "coords": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.98523,
+                        1.98523
+                    ],
+                    [
+                        1.98523,
+                        0.0,
+                        1.98523
+                    ],
+                    [
+                        1.98523,
+                        1.98523,
+                        0.0
+                    ]
+                ]
+            ]
+        },
+        "energies": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                -14.941852
+            ]
+        },
+        "forces": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ]
+        },
+        "virials": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        1.765918314398773,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.765918314398773,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.765918314398773
+                    ]
+                ]
+            ]
+        },
+        "stress": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        45.20209,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        45.20209,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        45.20209
+                    ]
+                ]
+            ]
+        }
+    }
+}

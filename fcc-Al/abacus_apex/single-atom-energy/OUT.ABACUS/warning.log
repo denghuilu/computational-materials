@@ -1,0 +1,13 @@
+ AUTO_SET NBANDS to 16
+                            startmag_type = 2
+                       charge from rho_at = 10.9185
+                         charge should be = 11
+ Warning: negative or imaginary starting charge :  neg = -0.00388142 ima = 5.97011e-14 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 11
+           total electron number from rho = 11
+                                should be = 11
+                 charge before normalized = 10.9999999999998
+                  charge after normalized = 11
+ scf  warning : Threshold on eigenvalues was too large.

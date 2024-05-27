@@ -1,0 +1,8 @@
+Lattice vector  : 
+20   0  0
+0   -20  0
+0   0  -20
+
+Direct positions :  
+
+Al 0 0 0

@@ -1,0 +1,10 @@
+{
+    "type": "meam",
+    "model": [
+        "library-Al.meam",
+        "Al.meam"
+    ],
+    "type_map": {
+        "Al": 0
+    }
+}

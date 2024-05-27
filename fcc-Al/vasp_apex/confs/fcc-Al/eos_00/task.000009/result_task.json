@@ -1,0 +1,171 @@
+{
+    "@module": "dpdata.system",
+    "@class": "LabeledSystem",
+    "data": {
+        "atom_numbs": [
+            4
+        ],
+        "atom_names": [
+            "Al"
+        ],
+        "atom_types": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "int64",
+            "data": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "orig": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "int64",
+            "data": [
+                0,
+                0,
+                0
+            ]
+        },
+        "cells": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        4.105153426,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        4.105153426,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        4.105153426
+                    ]
+                ]
+            ]
+        },
+        "coords": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        2.05258,
+                        2.05258
+                    ],
+                    [
+                        2.05258,
+                        0.0,
+                        2.05258
+                    ],
+                    [
+                        2.05258,
+                        2.05258,
+                        0.0
+                    ]
+                ]
+            ]
+        },
+        "energies": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                -14.9507825
+            ]
+        },
+        "forces": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ]
+        },
+        "virials": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        -1.4711469007142461,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        -1.4711469007142461,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        -1.4711469007142461
+                    ]
+                ]
+            ]
+        },
+        "stress": {
+            "@module": "numpy",
+            "@class": "array",
+            "dtype": "float64",
+            "data": [
+                [
+                    [
+                        -34.07048,
+                        -0.0,
+                        -0.0
+                    ],
+                    [
+                        -0.0,
+                        -34.07048,
+                        0.0
+                    ],
+                    [
+                        -0.0,
+                        0.0,
+                        -34.07048
+                    ]
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,44 @@
+ running   14 mpi-ranks, with    2 threads/rank, on    1 nodes
+ distrk:  each k-point on   14 cores,    1 groups
+ distr:  one band on    1 cores,   14 groups
+ vasp.6.4.2 20Jul23 (build Apr 22 2024 22:35:45) complex                         
+ POSCAR found type information on POSCAR Al
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have a (more or less) 'small supercell' and for smaller cells       |
+|     it is recommended to use the reciprocal-space projection scheme!        |
+|     The real-space optimization is not efficient for small cells and it     |
+|     is also less accurate ...                                               |
+|     Therefore, set LREAL=.FALSE. in the INCAR file.                         |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.247761481726E+01   -0.24776E+01   -0.36114E+03  6160   0.508E+02
+DAV:   2    -0.143325003243E+02   -0.11855E+02   -0.11577E+02  8974   0.436E+01
+DAV:   3    -0.144156718708E+02   -0.83172E-01   -0.82923E-01  8260   0.496E+00
+DAV:   4    -0.144159020665E+02   -0.23020E-03   -0.23019E-03 10234   0.266E-01
+DAV:   5    -0.144159021779E+02   -0.11143E-06   -0.11118E-06  8358   0.494E-03    0.199E+00
+RMM:   6    -0.143693730473E+02    0.46529E-01   -0.87651E-03  6160   0.541E-01    0.118E+00
+RMM:   7    -0.143362906912E+02    0.33082E-01   -0.25708E-02  6160   0.897E-01    0.202E-01
+RMM:   8    -0.143362715323E+02    0.19159E-04   -0.56277E-04  6160   0.153E-01    0.290E-02
+RMM:   9    -0.143362768192E+02   -0.52868E-05   -0.10423E-04  6160   0.631E-02    0.173E-02
+RMM:  10    -0.143362795319E+02   -0.27127E-05   -0.27883E-05  6160   0.389E-02    0.784E-03
+RMM:  11    -0.143362737356E+02    0.57964E-05   -0.70265E-06  6158   0.158E-02    0.347E-03
+RMM:  12    -0.143362744963E+02   -0.76070E-06   -0.18926E-06  5005   0.105E-02
+   1 F= -.14336274E+02 E0= -.14335805E+02  d E =-.143363E+02
+ curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
+ trial: gam= 0.00000 g(F)=  0.511E-64 g(S)=  0.128E-32 ort = 0.000E+00 (trialstep = 0.100E+01)
+ search vector abs. value=  0.100E-09
+ reached required accuracy - stopping structural energy minimisation

@@ -1,0 +1,14 @@
+{
+    "type": "elastic",
+    "skip": false,
+    "norm_deform": 0.01,
+    "shear_deform": 0.01,
+    "conventional": false,
+    "ieee": true,
+    "cal_type": "relaxation",
+    "cal_setting": {
+        "relax_pos": true,
+        "relax_shape": false,
+        "relax_vol": false
+    }
+}
