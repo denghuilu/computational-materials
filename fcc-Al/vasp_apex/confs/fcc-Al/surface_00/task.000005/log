@@ -1,0 +1,68 @@
+:: initializing oneAPI environment ...
+   BASH version = 5.0.17(1)-release
+:: tbb -- latest
+:: dev-utilities -- latest
+:: mkl -- latest
+:: compiler -- latest
+:: mpi -- latest
+:: oneAPI environment initialized ::
+ running on   32 total cores
+ distrk:  each k-point on   32 cores,    1 groups
+ distr:  one band on    1 cores,   32 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Nov 07 2022 11:18:25) complex          
+  
+ POSCAR found type information on POSCAR  Al
+ POSCAR found :  1 types and      12 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.499593761862E+02    0.49959E+02   -0.11063E+04 50688   0.665E+02
+DAV:   2    -0.434871603973E+02   -0.93447E+02   -0.93148E+02 90400   0.858E+01
+DAV:   3    -0.443896848448E+02   -0.90252E+00   -0.90037E+00 73984   0.125E+01
+DAV:   4    -0.444011003431E+02   -0.11415E-01   -0.11414E-01100000   0.145E+00
+DAV:   5    -0.444011828138E+02   -0.82471E-04   -0.82471E-04 79296   0.104E-01    0.503E+00
+RMM:   6    -0.433319826037E+02    0.10692E+01   -0.31024E+00 55144   0.233E+00    0.320E+00
+RMM:   7    -0.426419305945E+02    0.69005E+00   -0.48036E-01 55483   0.118E+00    0.182E+00
+RMM:   8    -0.425444199838E+02    0.97511E-01   -0.10665E-01 60695   0.824E-01    0.478E-01
+RMM:   9    -0.425377401691E+02    0.66798E-02   -0.11400E-02 63521   0.320E-01    0.208E-01
+RMM:  10    -0.425369285465E+02    0.81162E-03   -0.29408E-03 61911   0.166E-01    0.761E-02
+RMM:  11    -0.425369008474E+02    0.27699E-04   -0.12790E-03 61198   0.831E-02    0.383E-02
+RMM:  12    -0.425370952832E+02   -0.19444E-03   -0.45539E-04 61200   0.520E-02    0.200E-02
+RMM:  13    -0.425373714027E+02   -0.27612E-03   -0.30376E-04 55879   0.395E-02    0.157E-02
+RMM:  14    -0.425375646416E+02   -0.19324E-03   -0.37696E-05 56522   0.207E-02    0.604E-03
+RMM:  15    -0.425376640844E+02   -0.99443E-04   -0.22714E-05 52564   0.133E-02    0.548E-03
+RMM:  16    -0.425377039800E+02   -0.39896E-04   -0.15111E-05 51017   0.821E-03    0.371E-03
+RMM:  17    -0.425377778340E+02   -0.73854E-04   -0.94581E-06 45400   0.616E-03    0.134E-03
+RMM:  18    -0.425378317969E+02   -0.53963E-04   -0.42363E-06 42518   0.447E-03    0.907E-04
+RMM:  19    -0.425378589505E+02   -0.27154E-04   -0.31752E-06 40806   0.335E-03    0.368E-04
+RMM:  20    -0.425378643863E+02   -0.54358E-05   -0.74627E-07 38782   0.217E-03    0.728E-04
+RMM:  21    -0.425378657123E+02   -0.13260E-05   -0.16891E-07 32434   0.156E-03    0.603E-04
+RMM:  22    -0.425378659471E+02   -0.23477E-06   -0.58626E-08 26149   0.133E-03
+   1 F= -.42537866E+02 E0= -.42538128E+02  d E =0.787197E-03

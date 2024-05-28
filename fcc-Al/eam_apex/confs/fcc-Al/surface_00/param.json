@@ -1,0 +1,1 @@
+{"type": "surface", "min_slab_size": 10, "min_vacuum_size": 11, "max_miller": 2, "cal_type": "static", "reproduce": false, "pert_xz": 0.01, "cal_setting": {"relax_pos": true, "relax_shape": true, "relax_vol": false}}

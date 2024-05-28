@@ -3,7 +3,7 @@
         "batch_type": "Slurm",
         "context_type": "local",
         "local_root" : "./",
-        "remote_root": "/home/denghui/deepmd-kit/computational-materials/fcc-Al/eam_apex"
+        "remote_root": "/home/denghui/deepmd-kit/computational-materials/fcc-Al/dp_apex"
     },
     "resources":{
         "number_node": 1,

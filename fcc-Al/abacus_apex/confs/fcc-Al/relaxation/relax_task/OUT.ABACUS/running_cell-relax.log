@@ -9,7 +9,7 @@
                               https://github.com/deepmodeling/abacus-develop         
                       Commit: f9124675f (Wed May 22 09:49:08 2024 +0800)
 
-    Start Time is Sun May 26 13:44:06 2024
+    Start Time is Mon May 27 23:14:34 2024
                                                                                      
  ------------------------------------------------------------------------------------
 
@@ -176,7 +176,7 @@ mixing_ndim: 8
             electron number of element Al = 11
       total electron number of element Al = 44
             AUTOSET number of electrons:  = 44
- DONE : SETUP UNITCELL Time : 2.87079 (SEC)
+ DONE : SETUP UNITCELL Time : 3.11977 (SEC)
 
 
 
@@ -230,7 +230,7 @@ Original cell was built up by 4 primitive cells.
                    SPACE GROUP OPERATIONS = 48
                               POINT GROUP = O_h
                POINT GROUP IN SPACE GROUP = O_h
- DONE : SYMMETRY Time : 2.98526 (SEC)
+ DONE : SYMMETRY Time : 3.23594 (SEC)
 
 
 
@@ -448,7 +448,7 @@ K-POINTS DIRECT COORDINATES
       26   0.09090909   0.45454545   0.09090909 0.0361
       27   0.18181818   0.09090909   0.18181818 0.0361
       28   0.18181818   0.27272727   0.09090909 0.0721
- DONE : INIT K-POINTS Time : 3.18812 (SEC)
+ DONE : INIT K-POINTS Time : 3.44496 (SEC)
 
 
 
@@ -480,7 +480,7 @@ K-POINTS DIRECT COORDINATES
         1            481           7809
  --------------- sum -------------------
         1            481           7809
- DONE : INIT PLANEWAVE Time : 3.23185 (SEC)
+ DONE : INIT PLANEWAVE Time : 3.49055 (SEC)
 
                            occupied bands = 22
                                    NBANDS = 32
@@ -495,12 +495,12 @@ K-POINTS DIRECT COORDINATES
  projector 3 L=1
  projector 4 L=1
       TOTAL NUMBER OF NONLOCAL PROJECTORS = 32
- DONE : LOCAL POTENTIAL Time : 3.25507 (SEC)
+ DONE : LOCAL POTENTIAL Time : 3.51638 (SEC)
 
 
  Init Non-Local PseudoPotential table : 
  Init Non-Local-Pseudopotential done.
- DONE : NON-LOCAL POTENTIAL Time : 3.32224 (SEC)
+ DONE : NON-LOCAL POTENTIAL Time : 3.58181 (SEC)
 
 
  Make real space PAO into reciprocal space.
@@ -509,14 +509,14 @@ K-POINTS DIRECT COORDINATES
                                     max q = 1905
 
  number of pseudo atomic orbitals for Al is 0
- DONE : INIT BASIS Time : 3.40122 (SEC)
+ DONE : INIT BASIS Time : 3.67535 (SEC)
 
 
  -------------------------------------------
  STEP OF RELAXATION : 1
  -------------------------------------------
                                  init_chg = atomic
- DONE : INIT SCF Time : 3.53666 (SEC)
+ DONE : INIT SCF Time : 3.81373 (SEC)
 
 
  PW ALGORITHM --------------- ION=   1  ELEC=   1--------------------------------
@@ -1706,9 +1706,9 @@ Al4                               0.0000000000         0.0000000000         0.00
 ----------------------------------------------------------------
 TOTAL-STRESS (KBAR)                                           
 ----------------------------------------------------------------
-        4.3984986913         0.0000000000        -0.0000000000
-        0.0000000000         4.3984986913         0.0000000000
-       -0.0000000000         0.0000000000         4.3984986913
+        4.3984986913        -0.0000000000         0.0000000000
+       -0.0000000000         4.3984986913         0.0000000000
+        0.0000000000         0.0000000000         4.3984986913
 ----------------------------------------------------------------
  TOTAL-PRESSURE: 4.398499 KBAR
 
@@ -1730,20 +1730,20 @@ taud_Al4       0.5000000000     0.5000000000     0.0000000000 +0.0000     0.0000
                              Volume (A^3) = 66.334717
 
  Lattice vectors: (Cartesian coordinate: in unit of a_0)
-            +4.048062           +0.000000           +0.000000
+            +4.048062           +0.000000           -0.000000
             +0.000000           +4.048062           +0.000000
-            +0.000000           +0.000000           +4.048062
+            -0.000000           +0.000000           +4.048062
  Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
             +0.247032           -0.000000           +0.000000
             -0.000000           +0.247032           -0.000000
             +0.000000           -0.000000           +0.247032
- DONE : SETUP UNITCELL Time : 39.353647 (SEC)
+ DONE : SETUP UNITCELL Time : 39.787352 (SEC)
 
 
  -------------------------------------------
  STEP OF RELAXATION : 2
  -------------------------------------------
- DONE : LOCAL POTENTIAL Time : 39.413332 (SEC)
+ DONE : LOCAL POTENTIAL Time : 39.843956 (SEC)
 
 
 
@@ -1764,9 +1764,9 @@ taud_Al4       0.5000000000     0.5000000000     0.0000000000 +0.0000     0.0000
 
 
  LATTICE VECTORS: (CARTESIAN COORDINATE: IN UNIT OF A0)
-            +4.048062           +0.000000           +0.000000
+            +4.048062           +0.000000           -0.000000
             +0.000000           +4.048062           +0.000000
-            +0.000000           +0.000000           +4.048062
+            -0.000000           +0.000000           +4.048062
                        right hand lattice = 1
 
  The lattice vectors have been changed (STRU_SIMPLE.cif)
@@ -1791,7 +1791,7 @@ Original cell was built up by 4 primitive cells.
                    SPACE GROUP OPERATIONS = 48
                               POINT GROUP = O_h
                POINT GROUP IN SPACE GROUP = O_h
- DONE : SYMMETRY Time : 39.541162 (SEC)
+ DONE : SYMMETRY Time : 39.972976 (SEC)
 
 
  SETUP K-POINTS
@@ -1888,12 +1888,12 @@ K-POINTS DIRECT COORDINATES
       26   0.09090909   0.45454545   0.09090909 0.0361
       27   0.18181818   0.09090909   0.18181818 0.0361
       28   0.18181818   0.27272727   0.09090909 0.0721
- DONE : INIT K-POINTS Time : 39.542041 (SEC)
+ DONE : INIT K-POINTS Time : 39.973860 (SEC)
 
 
  Init Non-Local PseudoPotential table : 
  Init Non-Local-Pseudopotential done.
- DONE : NON-LOCAL POTENTIAL Time : 39.660275 (SEC)
+ DONE : NON-LOCAL POTENTIAL Time : 40.051920 (SEC)
 
                                      npwx = 6447
 
@@ -1906,7 +1906,7 @@ K-POINTS DIRECT COORDINATES
  Find the file, try to read charge from file.
  read in fermi energy = 0.000000
  NEW-OLD atomic charge density approx. for the potential !
- DONE : INIT SCF Time : 39.872068 (SEC)
+ DONE : INIT SCF Time : 40.275061 (SEC)
 
 
  PW ALGORITHM --------------- ION=   2  ELEC=   1--------------------------------
@@ -2964,20 +2964,20 @@ taud_Al4       0.5000000000     0.5000000000     0.0000000000 +0.0000     0.0000
                              Volume (A^3) = 66.262089
 
  Lattice vectors: (Cartesian coordinate: in unit of a_0)
-            +4.046584           +0.000000           +0.000000
-            +0.000000           +4.046584           +0.000000
-            +0.000000           +0.000000           +4.046584
+            +4.046584           -0.000000           -0.000000
+            -0.000000           +4.046584           +0.000000
+            -0.000000           +0.000000           +4.046584
  Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
-            +0.247122           -0.000000           +0.000000
-            -0.000000           +0.247122           -0.000000
+            +0.247122           +0.000000           +0.000000
+            +0.000000           +0.247122           -0.000000
             +0.000000           -0.000000           +0.247122
- DONE : SETUP UNITCELL Time : 49.700937 (SEC)
+ DONE : SETUP UNITCELL Time : 50.541961 (SEC)
 
 
  -------------------------------------------
  STEP OF RELAXATION : 3
  -------------------------------------------
- DONE : LOCAL POTENTIAL Time : 49.757426 (SEC)
+ DONE : LOCAL POTENTIAL Time : 50.556019 (SEC)
 
 
 
@@ -2998,9 +2998,9 @@ taud_Al4       0.5000000000     0.5000000000     0.0000000000 +0.0000     0.0000
 
 
  LATTICE VECTORS: (CARTESIAN COORDINATE: IN UNIT OF A0)
-            +4.046584           +0.000000           +0.000000
-            +0.000000           +4.046584           +0.000000
-            +0.000000           +0.000000           +4.046584
+            +4.046584           -0.000000           -0.000000
+            -0.000000           +4.046584           +0.000000
+            -0.000000           +0.000000           +4.046584
                        right hand lattice = 1
 
  The lattice vectors have been changed (STRU_SIMPLE.cif)
@@ -3025,7 +3025,7 @@ Original cell was built up by 4 primitive cells.
                    SPACE GROUP OPERATIONS = 48
                               POINT GROUP = O_h
                POINT GROUP IN SPACE GROUP = O_h
- DONE : SYMMETRY Time : 49.884349 (SEC)
+ DONE : SYMMETRY Time : 50.638239 (SEC)
 
 
  SETUP K-POINTS
@@ -3122,12 +3122,12 @@ K-POINTS DIRECT COORDINATES
       26   0.09090909   0.45454545   0.09090909 0.0361
       27   0.18181818   0.09090909   0.18181818 0.0361
       28   0.18181818   0.27272727   0.09090909 0.0721
- DONE : INIT K-POINTS Time : 49.885327 (SEC)
+ DONE : INIT K-POINTS Time : 50.639160 (SEC)
 
 
  Init Non-Local PseudoPotential table : 
  Init Non-Local-Pseudopotential done.
- DONE : NON-LOCAL POTENTIAL Time : 49.952600 (SEC)
+ DONE : NON-LOCAL POTENTIAL Time : 50.794984 (SEC)
 
                                      npwx = 6447
 
@@ -3142,7 +3142,7 @@ K-POINTS DIRECT COORDINATES
  first order charge density extrapolation !
  Find the file, try to read charge from file.
  read in fermi energy = 0.000000
- DONE : INIT SCF Time : 50.230046 (SEC)
+ DONE : INIT SCF Time : 51.129812 (SEC)
 
 
  PW ALGORITHM --------------- ION=   3  ELEC=   1--------------------------------
@@ -4199,86 +4199,86 @@ TIME STATISTICS
 -------------------------------------------------------------------------------------
      CLASS_NAME                 NAME             TIME(Sec)  CALLS   AVG(Sec) PER(%)
 -------------------------------------------------------------------------------------
-                     total                        59.57          41   1.45   100.00
-Driver               reading                       0.27           1   0.27     0.45
+                     total                        60.97          41   1.49   100.00
+Driver               reading                       0.28           1   0.28     0.47
 Input                Init                          0.01           1   0.01     0.01
-Input_Conv           Convert                       0.26           1   0.26     0.43
-Driver               driver_line                  59.30           1  59.30    99.55
+Input_Conv           Convert                       0.27           1   0.27     0.45
+Driver               driver_line                  60.68           1  60.68    99.53
 UnitCell             check_tau                     0.00           1   0.00     0.00
-PW_Basis_Sup         setuptransform                0.03           1   0.03     0.06
+PW_Basis_Sup         setuptransform                0.04           1   0.04     0.06
 PW_Basis_Sup         distributeg                   0.00           1   0.00     0.00
-mymath               heapsort                      0.03        1355   0.00     0.04
-Symmetry             analy_sys                    36.54           2  18.27    61.35
+mymath               heapsort                      0.02        1355   0.00     0.04
+Symmetry             analy_sys                    36.72           2  18.36    60.24
 PW_Basis_K           setuptransform                0.03           1   0.03     0.04
 PW_Basis_K           distributeg                   0.00           1   0.00     0.00
-PW_Basis             setup_struc_factor            0.02           3   0.01     0.03
+PW_Basis             setup_struc_factor            0.10           3   0.03     0.16
 ppcell_vnl           init                          0.00           1   0.00     0.01
-ppcell_vl            init_vloc                     0.09           3   0.03     0.15
-ppcell_vnl           init_vnl                      0.25           3   0.08     0.42
+ppcell_vl            init_vloc                     0.05           3   0.02     0.08
+ppcell_vnl           init_vnl                      0.30           3   0.10     0.49
 WF_atomic            init_at_1                     0.00           3   0.00     0.00
 wavefunc             wfcinit                       0.00           1   0.00     0.01
-Ions                 opt_ions                     56.14           1  56.14    94.25
-ESolver_KS_PW        run                          52.14           3  17.38    87.53
+Ions                 opt_ions                     57.27           1  57.27    93.94
+ESolver_KS_PW        run                          52.63           3  17.54    86.32
 H_Ewald_pw           compute_ewald                 0.01           3   0.00     0.01
 Charge               set_rho_core                  0.00           3   0.00     0.00
 Charge               atomic_rho                    0.06           6   0.01     0.10
-PW_Basis_Sup         recip2real                    0.73         209   0.00     1.22
-PW_Basis_Sup         gathers_scatterp              0.11         209   0.00     0.19
-Potential            init_pot                      0.27           3   0.09     0.45
-Potential            update_from_charge            2.40          28   0.09     4.03
+PW_Basis_Sup         recip2real                    0.78         209   0.00     1.28
+PW_Basis_Sup         gathers_scatterp              0.11         209   0.00     0.18
+Potential            init_pot                      0.26           3   0.09     0.42
+Potential            update_from_charge            2.60          28   0.09     4.27
 Potential            cal_fixed_v                   0.01           3   0.00     0.02
 PotLocal             cal_fixed_v                   0.01           3   0.00     0.02
-Potential            cal_v_eff                     2.37          28   0.08     3.97
-H_Hartree_pw         v_hartree                     0.29          28   0.01     0.48
-PW_Basis_Sup         real2recip                    0.91         273   0.00     1.53
-PW_Basis_Sup         gatherp_scatters              0.10         273   0.00     0.16
-PotXC                cal_v_eff                     2.06          28   0.07     3.45
-XC_Functional        v_xc                          2.05          28   0.07     3.44
-Potential            interpolate_vrs               0.01          28   0.00     0.01
-Symmetry             rhog_symmetry                 0.31          31   0.01     0.53
+Potential            cal_v_eff                     2.57          28   0.09     4.21
+H_Hartree_pw         v_hartree                     0.30          28   0.01     0.50
+PW_Basis_Sup         real2recip                    0.99         273   0.00     1.63
+PW_Basis_Sup         gatherp_scatters              0.12         273   0.00     0.20
+PotXC                cal_v_eff                     2.24          28   0.08     3.67
+XC_Functional        v_xc                          2.23          28   0.08     3.65
+Potential            interpolate_vrs               0.01          28   0.00     0.02
+Symmetry             rhog_symmetry                 0.33          31   0.01     0.53
 Symmetry             group fft grids               0.06          31   0.00     0.10
 Charge_Mixing        init_mixing                   0.00           3   0.00     0.00
-ESolver_KS_PW        hamilt2density               47.34          28   1.69    79.47
-HSolverPW            solve                        46.71          28   1.67    78.42
-Nonlocal             getvnl                        1.95         784   0.00     3.27
-pp_cell_vnl          getvnl                        2.23         952   0.00     3.74
-Structure_Factor     get_sk                        0.45        2408   0.00     0.75
+ESolver_KS_PW        hamilt2density               47.34          28   1.69    77.64
+HSolverPW            solve                        46.69          28   1.67    76.59
+Nonlocal             getvnl                        2.14         784   0.00     3.51
+pp_cell_vnl          getvnl                        2.59         952   0.00     4.25
+Structure_Factor     get_sk                        0.64        2408   0.00     1.05
 WF_atomic            atomic_wfc                    0.02          28   0.00     0.03
-DiagoIterAssist      diagH_subspace_init           0.36          28   0.01     0.61
-Operator             hPsi                         17.95       80585   0.00    30.14
-Operator             EkineticPW                    1.14       80585   0.00     1.91
-Operator             VeffPW                       12.93       80585   0.00    21.70
-PW_Basis_K           recip_to_real gpu             7.83      127373   0.00    13.15
-PW_Basis_K           real_to_recip gpu             5.59      102285   0.00     9.39
-Operator             NonlocalPW                    3.75       80585   0.00     6.30
-Nonlocal             add_nonlocal_pp               1.99       80585   0.00     3.35
-DiagoIterAssist      diagH_LAPACK                  1.06         700   0.00     1.78
-DiagoCG              diag_once                    34.72         784   0.04    58.29
-DiagoCG_New          spsi_func                     1.15      159770   0.00     1.94
-DiagoCG_New          hpsi_func                    15.74       79885   0.00    26.42
-ElecStatePW          psiToRho                      2.59          28   0.09     4.35
-Charge               rho_mpi                       0.03          28   0.00     0.05
-Charge               reduce_diff_pools             0.03          28   0.00     0.05
-Charge_Mixing        get_drho                      0.19          28   0.01     0.33
-Charge_Mixing        inner_product_recip_rho       0.01          28   0.00     0.02
+DiagoIterAssist      diagH_subspace_init           0.27          28   0.01     0.44
+Operator             hPsi                         17.78       80585   0.00    29.17
+Operator             EkineticPW                    1.13       80585   0.00     1.85
+Operator             VeffPW                       12.80       80585   0.00    20.99
+PW_Basis_K           recip_to_real gpu             7.76      127373   0.00    12.72
+PW_Basis_K           real_to_recip gpu             5.54      102285   0.00     9.08
+Operator             NonlocalPW                    3.72       80585   0.00     6.11
+Nonlocal             add_nonlocal_pp               1.99       80585   0.00     3.26
+DiagoIterAssist      diagH_LAPACK                  1.07         700   0.00     1.75
+DiagoCG              diag_once                    34.28         784   0.04    56.22
+DiagoCG_New          spsi_func                     1.12      159770   0.00     1.84
+DiagoCG_New          hpsi_func                    15.57       79885   0.00    25.54
+ElecStatePW          psiToRho                      2.85          28   0.10     4.68
+Charge               rho_mpi                       0.03          28   0.00     0.04
+Charge               reduce_diff_pools             0.03          28   0.00     0.04
+Charge_Mixing        get_drho                      0.21          28   0.01     0.34
+Charge_Mixing        inner_product_recip_rho       0.01          28   0.00     0.01
 Charge               mix_rho                       0.22          20   0.01     0.36
 Charge               Pulay_mixing                  0.04          20   0.00     0.06
-Charge_Mixing        inner_product_recip_hartree   0.03         106   0.00     0.06
-DiagoIterAssist      diagH_subspace                4.63         672   0.01     7.77
-Forces               cal_force_loc                 0.03           3   0.01     0.06
+Charge_Mixing        inner_product_recip_hartree   0.04         106   0.00     0.06
+DiagoIterAssist      diagH_subspace                4.62         672   0.01     7.57
+Forces               cal_force_loc                 0.03           3   0.01     0.05
 Forces               cal_force_ew                  0.02           3   0.01     0.03
-Forces               cal_force_nl                  0.16           3   0.05     0.27
+Forces               cal_force_nl                  0.11           3   0.04     0.18
 Forces               cal_force_cc                  0.00           3   0.00     0.00
 Forces               cal_force_scc                 0.04           3   0.01     0.06
-Stress_PW            cal_stress                    3.76           3   1.25     6.31
-Stress_Func          stress_kin                    0.23           3   0.08     0.38
-Stress_Func          stress_har                    0.02           3   0.01     0.03
-Stress_Func          stress_ewa                    0.02           3   0.01     0.03
-Stress_Func          stress_gga                    0.12           3   0.04     0.20
-Stress_Func          stress_loc                    0.05           3   0.02     0.08
+Stress_PW            cal_stress                    4.44           3   1.48     7.29
+Stress_Func          stress_kin                    0.23           3   0.08     0.37
+Stress_Func          stress_har                    0.01           3   0.00     0.02
+Stress_Func          stress_ewa                    0.01           3   0.00     0.02
+Stress_Func          stress_gga                    0.14           3   0.05     0.23
+Stress_Func          stress_loc                    0.04           3   0.01     0.07
 Stress_Func          stress_cc                     0.00           3   0.00     0.00
-Stress_Func          stress_nl                     3.33           3   1.11     5.59
-ESolver_KS_PW        init_after_vc                 0.58           2   0.29     0.97
+Stress_Func          stress_nl                     4.01           3   1.34     6.57
+ESolver_KS_PW        init_after_vc                 0.54           2   0.27     0.88
 ModuleIO             write_istate_info             0.01           1   0.01     0.01
 -------------------------------------------------------------------------------------
 
@@ -4300,6 +4300,6 @@ ModuleIO             write_istate_info             0.01           1   0.01     0
  -------------   < 1.0 MB has been ignored ----------------
  ----------------------------------------------------------
 
- Start  Time  : Sun May 26 13:44:06 2024
- Finish Time  : Sun May 26 13:45:05 2024
- Total  Time  : 0 h 0 mins 59 secs 
+ Start  Time  : Mon May 27 23:14:34 2024
+ Finish Time  : Mon May 27 23:15:35 2024
+ Total  Time  : 0 h 1 mins 1 secs 

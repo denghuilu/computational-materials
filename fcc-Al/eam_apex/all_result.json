@@ -1,5 +1,5 @@
 {
-    "work_path": "/home/denghui/deepmd-kit/pack/eam_apex",
+    "work_path": "/home/denghui/deepmd-kit/computational-materials/fcc-Al/eam_apex",
     "archive_key": "n45KzI4YP0",
     "confs/fcc-Al": {
         "relaxation": {
@@ -597,6 +597,54 @@
                 "GV": 33.52730164000003,
                 "EV": 88.46887274869243,
                 "uV": 0.31935569552582027
+            }
+        },
+        "surface_00": {
+            "parameter": {
+                "type": "surface",
+                "min_slab_size": 10,
+                "min_vacuum_size": 11,
+                "max_miller": 2,
+                "cal_type": "static",
+                "reproduce": false,
+                "pert_xz": 0.01,
+                "cal_setting": {
+                    "relax_pos": true,
+                    "relax_shape": true,
+                    "relax_vol": false
+                }
+            },
+            "result": {
+                "[1, 1, 1]_task.000000": [
+                    0.7388589288106674,
+                    -3.2308410000000003,
+                    -3.36069425
+                ],
+                "[1, 1, 0]_task.000001": [
+                    0.9079203470866238,
+                    -3.197838375,
+                    -3.36069425
+                ],
+                "[1, 0, 0]_task.000002": [
+                    0.8240780116134442,
+                    -3.221331166666667,
+                    -3.36069425
+                ],
+                "[2, 2, 1]_task.000003": [
+                    0.8653787321880825,
+                    -3.1960531875,
+                    -3.36069425
+                ],
+                "[2, 1, 1]_task.000004": [
+                    0.885490189126895,
+                    -3.22314125,
+                    -3.36069425
+                ],
+                "[2, 1, 0]_task.000005": [
+                    0.9647963329324774,
+                    -3.17827525,
+                    -3.36069425
+                ]
             }
         }
     }

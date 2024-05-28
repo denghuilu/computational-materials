@@ -1,44 +1,78 @@
- running   14 mpi-ranks, with    2 threads/rank, on    1 nodes
- distrk:  each k-point on   14 cores,    1 groups
- distr:  one band on    1 cores,   14 groups
- vasp.6.4.2 20Jul23 (build Apr 22 2024 22:35:45) complex                         
- POSCAR found type information on POSCAR Al
+ 
+:: initializing oneAPI environment ...
+   bash: BASH_VERSION = 5.0.17(1)-release
+   args: Using "$@" for setvars.sh arguments: 
+:: compiler -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: oneAPI environment initialized ::
+ 
+ running on   32 total cores
+ distrk:  each k-point on   32 cores,    1 groups
+ distr:  one band on    1 cores,   32 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Nov 07 2022 11:18:25) complex          
+  
+ POSCAR found type information on POSCAR  Al
  POSCAR found :  1 types and       4 ions
  scaLAPACK will be used
- -----------------------------------------------------------------------------
+
+ ----------------------------------------------------------------------------- 
 |                                                                             |
-|               ----> ADVICE to this user running VASP <----                  |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
 |                                                                             |
-|     You have a (more or less) 'small supercell' and for smaller cells       |
-|     it is recommended to use the reciprocal-space projection scheme!        |
-|     The real-space optimization is not efficient for small cells and it     |
-|     is also less accurate ...                                               |
-|     Therefore, set LREAL=.FALSE. in the INCAR file.                         |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
 |                                                                             |
- -----------------------------------------------------------------------------
+ ----------------------------------------------------------------------------- 
+
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
 
  LDA part: xc-table for Pade appr. of Perdew
  POSCAR, INCAR and KPOINTS ok, starting setup
- FFT: planning ... GRIDC
- FFT: planning ... GRID_SOFT
- FFT: planning ... GRID
+ FFT: planning ...
  WAVECAR not read
  entering main loop
        N       E                     dE             d eps       ncg     rms          rms(c)
-DAV:   1    -0.254564509858E+01   -0.25456E+01   -0.38537E+03  6202   0.523E+02
-DAV:   2    -0.150102917035E+02   -0.12465E+02   -0.12139E+02  9128   0.480E+01
-DAV:   3    -0.150772119247E+02   -0.66920E-01   -0.66796E-01  8218   0.475E+00
-DAV:   4    -0.150773719833E+02   -0.16006E-03   -0.16005E-03 10080   0.223E-01
-DAV:   5    -0.150773720543E+02   -0.71028E-07   -0.70133E-07  8288   0.389E-03    0.261E+00
-RMM:   6    -0.150252963827E+02    0.52076E-01   -0.53957E-03  6160   0.427E-01    0.153E+00
-RMM:   7    -0.149871965805E+02    0.38100E-01   -0.16485E-02  6160   0.714E-01    0.225E-01
-RMM:   8    -0.149871665639E+02    0.30017E-04   -0.57826E-04  6160   0.160E-01    0.279E-02
-RMM:   9    -0.149871723017E+02   -0.57379E-05   -0.99083E-05  6160   0.690E-02    0.234E-02
-RMM:  10    -0.149871733075E+02   -0.10058E-05   -0.22189E-05  6160   0.332E-02    0.226E-02
-RMM:  11    -0.149871688465E+02    0.44610E-05   -0.43784E-06  6070   0.128E-02    0.520E-03
-RMM:  12    -0.149871687453E+02    0.10112E-06   -0.11718E-06  4569   0.812E-03
+DAV:   1    -0.954853574050E+01   -0.95485E+01   -0.38662E+03 14080   0.227E+02
+DAV:   2    -0.150623755702E+02   -0.55138E+01   -0.54747E+01 20992   0.182E+01
+DAV:   3    -0.150773440980E+02   -0.14969E-01   -0.14966E-01 16320   0.117E+00
+DAV:   4    -0.150773720476E+02   -0.27950E-04   -0.27950E-04 26176   0.466E-02
+DAV:   5    -0.150773720539E+02   -0.63454E-08   -0.68138E-08 15552   0.289E-04    0.261E+00
+RMM:   6    -0.150253068860E+02    0.52065E-01   -0.43099E-03 14080   0.181E-01    0.153E+00
+RMM:   7    -0.149872520780E+02    0.38055E-01   -0.13294E-02 14080   0.292E-01    0.243E-01
+RMM:   8    -0.149871778007E+02    0.74277E-04   -0.24789E-04 14080   0.399E-02    0.181E-02
+RMM:   9    -0.149871734345E+02    0.43662E-05   -0.20798E-05 14080   0.101E-02    0.139E-02
+RMM:  10    -0.149871691834E+02    0.42512E-05   -0.17339E-06 13126   0.332E-03    0.356E-02
+RMM:  11    -0.149871691121E+02    0.71304E-07   -0.47877E-08  8269   0.581E-04
    1 F= -.14987169E+02 E0= -.14987966E+02  d E =-.149872E+02
  curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
- trial: gam= 0.00000 g(F)=  0.733E-63 g(S)=  0.723E-08 ort = 0.000E+00 (trialstep = 0.100E+01)
- search vector abs. value=  0.733E-08
+ trial: gam= 0.00000 g(F)=  0.843E-63 g(S)=  0.331E-09 ort = 0.000E+00 (trialstep = 0.100E+01)
+ search vector abs. value=  0.431E-09
  reached required accuracy - stopping structural energy minimisation

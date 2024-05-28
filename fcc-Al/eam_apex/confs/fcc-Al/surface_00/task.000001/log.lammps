@@ -1,0 +1,100 @@
+LAMMPS (2 Aug 2023 - Update 2)
+clear
+units 	metal
+dimension	3
+boundary	p p p
+atom_style	atomic
+box         tilt large
+
+The 'box' command has been removed and will be ignored
+
+read_data   conf.lmp
+Reading data file ...
+  triclinic box = (0 0 0) to (2.8510545 4.032 22.808436) with tilt (-0 0.01 0)
+  1 by 2 by 7 MPI processor grid
+  reading atoms ...
+  8 atoms
+  read_data CPU = 0.003 seconds
+mass            1 26.982
+neigh_modify    every 1 delay 0 check no
+pair_style      eam/alloy
+pair_coeff      * * Al-2009.eam.alloy Al
+compute         mype all pe
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz lx ly lz vol c_mype
+dump            1 all custom 100 dump.relax id type xs ys zs fx fy fz
+run    0
+WARNING: No fixes with time integration, atoms won't move (../verlet.cpp:60)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 8.875
+  ghost atom cutoff = 8.875
+  binsize = 4.4375, bins = 1 1 6
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton/tri
+      stencil: half/bin/3d/tri
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 2.76 | 2.76 | 2.761 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
+         0  -25.582707     -14147.98      -14804.268     -8797.476      -1.210093e-09  -34.143262      1.0693864e-06  2.8510545      4.032          22.808436      262.19328     -25.582707    
+Loop time of 3.78085e-05 on 14 procs for 0 steps with 8 atoms
+
+111.3% CPU use with 14 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 3.781e-05  |            |       |100.00
+
+Nlocal:       0.571429 ave           2 max           0 min
+Histogram: 7 0 0 0 0 6 0 0 0 1
+Nghost:        259.429 ave         279 max         244 min
+Histogram: 8 0 0 0 0 0 0 0 0 6
+Neighs:        35.7143 ave         155 max           0 min
+Histogram: 8 0 1 1 0 3 0 0 0 1
+
+Total # of neighbors = 500
+Ave neighs/atom = 62.5
+Neighbor list builds = 0
+Dangerous builds not checked
+variable        N equal count(all)
+variable        V equal vol
+variable        E equal "c_mype"
+variable        tmplx equal lx
+variable        tmply equal ly
+variable        Pxx equal pxx
+variable        Pyy equal pyy
+variable        Pzz equal pzz
+variable        Pxy equal pxy
+variable        Pxz equal pxz
+variable        Pyz equal pyz
+variable        Epa equal ${E}/${N}
+variable        Epa equal -25.5827067191382/${N}
+variable        Epa equal -25.5827067191382/8
+variable        Vpa equal ${V}/${N}
+variable        Vpa equal 262.193283007584/${N}
+variable        Vpa equal 262.193283007584/8
+variable        AA equal (${tmplx}*${tmply})
+variable        AA equal (2.8510545415*${tmply})
+variable        AA equal (2.8510545415*4.0319999997)
+print "All done"
+All done
+print "Total number of atoms = ${N}"
+Total number of atoms = 8
+print "Final energy per atoms = ${Epa}"
+Final energy per atoms = -3.19783833989228
+print "Final volume per atoms = ${Vpa}"
+Final volume per atoms = 32.774160375948
+print "Final Base area = ${AA}"
+Final Base area = 11.4954519104727
+print "Final Stress (xx yy zz xy xz yz) = ${Pxx} ${Pyy} ${Pzz} ${Pxy} ${Pxz} ${Pyz}"
+Final Stress (xx yy zz xy xz yz) = -14147.9801009227 -14804.2675948332 -8797.47598337974 -1.21009299137185e-09 -34.1432618699067 1.06938639594863e-06
+Total wall time: 0:00:00

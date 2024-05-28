@@ -1,0 +1,8 @@
+/tmp/inputs/artifacts/input_all/tmp/tmpzlrroa82/confs/fcc-Al/surface_00
+Miller_Indices: 	Surf_E(J/m^2) EpA(eV) equi_EpA(eV)
+[1, 1, 1]-task.000000:          0.841      -3.599   -3.747
+[1, 1, 0]-task.000001:          0.998      -3.567   -3.747
+[1, 0, 0]-task.000002:          0.932      -3.589   -3.747
+[2, 2, 1]-task.000003:          0.966      -3.562   -3.747
+[2, 1, 1]-task.000004:          0.960      -3.597   -3.747
+[2, 1, 0]-task.000005:          1.065      -3.545   -3.747

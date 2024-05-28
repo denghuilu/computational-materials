@@ -1,0 +1,8 @@
+/tmp/tmp9pvce0we/abacus-apex-joint-obzyg/confs/fcc-Al-surface-00--post/workdir/tmp/inputs/artifacts/input_all/tmp/tmpwef0hq68/confs/fcc-Al/surface_00
+Miller_Indices: 	Surf_E(J/m^2) EpA(eV) equi_EpA(eV)
+[1, 1, 1]-task.000000:          0.824    -1883.048 -1883.194
+[1, 1, 0]-task.000001:          0.979    -1883.017 -1883.194
+[1, 0, 0]-task.000002:          0.903    -1883.040 -1883.194
+[2, 2, 1]-task.000003:          0.933    -1883.015 -1883.194
+[2, 1, 1]-task.000004:          0.945    -1883.046 -1883.194
+[2, 1, 0]-task.000005:          1.044    -1882.995 -1883.194

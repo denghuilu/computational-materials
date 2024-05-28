@@ -14,3 +14,4 @@ lammps-local-relax-hmzfq	submit	2024-05-17T20:49:17.074845	/home/denghui/deepmd-
 lammps-apex-joint-2ae82	submit	2024-05-26T20:05:48.290587	/home/denghui/deepmd-kit/pack/lammps_apex
 lammps-apex-joint-ffmh4	submit	2024-05-26T20:31:24.134851	/home/denghui/deepmd-kit/pack/lammps_apex
 eam-apex-joint-k0f95	submit	2024-05-27T00:27:58.852561	/home/denghui/deepmd-kit/pack/eam_apex
+eam-apex-joint-0th4l	submit	2024-05-28T10:40:38.653618	/home/denghui/deepmd-kit/computational-materials/fcc-Al/eam_apex

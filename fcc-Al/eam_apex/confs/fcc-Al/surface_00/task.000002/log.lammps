@@ -1,0 +1,101 @@
+LAMMPS (2 Aug 2023 - Update 2)
+clear
+units 	metal
+dimension	3
+boundary	p p p
+atom_style	atomic
+box         tilt large
+
+The 'box' command has been removed and will be ignored
+
+read_data   conf.lmp
+Reading data file ...
+  triclinic box = (0 0 0) to (2.8510545 2.8510545 24.192) with tilt (-0 0.01 0)
+  1 by 1 by 14 MPI processor grid
+  reading atoms ...
+  6 atoms
+  read_data CPU = 0.003 seconds
+mass            1 26.982
+neigh_modify    every 1 delay 0 check no
+pair_style      eam/alloy
+pair_coeff      * * Al-2009.eam.alloy Al
+compute         mype all pe
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz lx ly lz vol c_mype
+dump            1 all custom 100 dump.relax id type xs ys zs fx fy fz
+run    0
+WARNING: No fixes with time integration, atoms won't move (../verlet.cpp:60)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 8.875
+  ghost atom cutoff = 8.875
+  binsize = 4.4375, bins = 1 1 6
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton/tri
+      stencil: half/bin/3d/tri
+      bin: standard
+WARNING: Proc sub-domain size < neighbor skin, could lead to lost atoms (../domain.cpp:966)
+Per MPI rank memory allocation (min/avg/max) = 2.779 | 2.779 | 2.779 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
+         0  -19.327987     -12407.726     -12407.677     -7052.6258     -9.0041253e-10 -77.058002      9.639122e-07   2.8510545      2.8510545      24.192         196.64496     -19.327987    
+Loop time of 1.28659e-05 on 14 procs for 0 steps with 6 atoms
+
+110.5% CPU use with 14 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 1.287e-05  |            |       |100.00
+
+Nlocal:       0.428571 ave           1 max           0 min
+Histogram: 8 0 0 0 0 0 0 0 0 6
+Nghost:            274 ave         339 max         226 min
+Histogram: 7 0 0 0 1 1 0 0 0 5
+Neighs:        27.5714 ave          88 max           0 min
+Histogram: 8 1 0 0 0 1 0 1 0 3
+
+Total # of neighbors = 386
+Ave neighs/atom = 64.333333
+Neighbor list builds = 0
+Dangerous builds not checked
+variable        N equal count(all)
+variable        V equal vol
+variable        E equal "c_mype"
+variable        tmplx equal lx
+variable        tmply equal ly
+variable        Pxx equal pxx
+variable        Pyy equal pyy
+variable        Pzz equal pzz
+variable        Pxy equal pxy
+variable        Pxz equal pxz
+variable        Pyz equal pyz
+variable        Epa equal ${E}/${N}
+variable        Epa equal -19.327987226047/${N}
+variable        Epa equal -19.327987226047/6
+variable        Vpa equal ${V}/${N}
+variable        Vpa equal 196.644962253249/${N}
+variable        Vpa equal 196.644962253249/6
+variable        AA equal (${tmplx}*${tmply})
+variable        AA equal (2.8510545415*${tmply})
+variable        AA equal (2.8510545415*2.8510545415)
+print "All done"
+All done
+print "Total number of atoms = ${N}"
+Total number of atoms = 6
+print "Final energy per atoms = ${Epa}"
+Final energy per atoms = -3.22133120434117
+print "Final volume per atoms = ${Vpa}"
+Final volume per atoms = 32.7741603755415
+print "Final Base area = ${AA}"
+Final Base area = 8.12851199860778
+print "Final Stress (xx yy zz xy xz yz) = ${Pxx} ${Pyy} ${Pzz} ${Pxy} ${Pxz} ${Pyz}"
+Final Stress (xx yy zz xy xz yz) = -12407.7264111243 -12407.6767324504 -7052.62583506654 -9.00412529240656e-10 -77.0580021056214 9.63912204339408e-07
+Total wall time: 0:00:00

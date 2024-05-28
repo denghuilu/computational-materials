@@ -1,0 +1,15 @@
+ Input_conv  warning : None kpar set in INPUT file, auto set kpar value.
+ Generate k-points file according to KSPACING: KPT
+ AUTO_SET NBANDS to 43
+                            startmag_type = 2
+                       charge from rho_at = 10.9185
+                         charge should be = 11
+ Warning: negative or imaginary starting charge :  neg = -0.00039352 ima = 3.62411e-14 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 66
+           total electron number from rho = 66
+                                should be = 66
+                 charge before normalized = 66.0000000000001
+                  charge after normalized = 66
+ scf  warning : Threshold on eigenvalues was too large.

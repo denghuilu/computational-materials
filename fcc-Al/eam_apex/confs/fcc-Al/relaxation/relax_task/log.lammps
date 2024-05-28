@@ -14,7 +14,7 @@ Reading data file ...
   2 by 1 by 7 MPI processor grid
   reading atoms ...
   4 atoms
-  read_data CPU = 0.003 seconds
+  read_data CPU = 0.004 seconds
 mass            1 26.982
 neigh_modify    every 1 delay 0 check no
 pair_style      eam/alloy
@@ -45,7 +45,7 @@ Per MPI rank memory allocation (min/avg/max) = 3.981 | 3.981 | 3.981 Mbytes
    Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
          0  -13.442336     -4150.3352     -4150.3352     -4150.3352      3.7965073e-13  2.5959278e-12 -1.4283041e-12  4.0389297      4.0389297      4.0389297      65.886871     -13.442336    
         19  -13.442777     -2.4652243e-07 -2.4652487e-07 -2.4651239e-07 -2.4121529e-12  7.3030708e-12  2.2432931e-12  4.032          4.032          4.032          65.548321     -13.442777    
-Loop time of 0.0117746 on 14 procs for 19 steps with 4 atoms
+Loop time of 0.0143193 on 14 procs for 19 steps with 4 atoms
 
 99.9% CPU use with 14 MPI tasks x no OpenMP threads
 
@@ -61,12 +61,12 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.0029405  | 0.0030678  | 0.0031649  |   0.1 | 26.05
-Neigh   | 0.00025001 | 0.00028377 | 0.00035565 |   0.0 |  2.41
-Comm    | 0.0062661  | 0.0064639  | 0.0067521  |   0.2 | 54.90
+Pair    | 0.0035514  | 0.0038062  | 0.0040568  |   0.2 | 26.58
+Neigh   | 0.00024414 | 0.00029458 | 0.0003669  |   0.0 |  2.06
+Comm    | 0.0076529  | 0.0080297  | 0.0085142  |   0.3 | 56.08
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.001959   |            |       | 16.64
+Other   |            | 0.002189   |            |       | 15.29
 
 Nlocal:       0.285714 ave           1 max           0 min
 Histogram: 10 0 0 0 0 0 0 0 0 4
@@ -88,9 +88,9 @@ Per MPI rank memory allocation (min/avg/max) = 4.231 | 4.517 | 5.231 Mbytes
    Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
         19  -13.442777     -2.4652243e-07 -2.4652487e-07 -2.4651239e-07 -2.4121529e-12  7.3030708e-12  2.2432931e-12  4.032          4.032          4.032          65.548321     -13.442777    
         20  -13.442777      5.9403618e-10  5.9848949e-10  5.8422018e-10  8.7875012e-13 -3.1655341e-12 -4.8562724e-12  4.032          4.032          4.032          65.548321     -13.442777    
-Loop time of 0.00234847 on 14 procs for 1 steps with 4 atoms
+Loop time of 0.00266269 on 14 procs for 1 steps with 4 atoms
 
-100.0% CPU use with 14 MPI tasks x no OpenMP threads
+99.9% CPU use with 14 MPI tasks x no OpenMP threads
 
 Minimization stats:
   Stopping criterion = force tolerance
@@ -104,12 +104,12 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.00051262 | 0.00054876 | 0.00061924 |   0.0 | 23.37
-Neigh   | 3.9826e-05 | 6.809e-05  | 0.00010365 |   0.0 |  2.90
-Comm    | 0.0010656  | 0.0011436  | 0.0012337  |   0.1 | 48.70
+Pair    | 0.00066985 | 0.00072221 | 0.00080422 |   0.0 | 27.12
+Neigh   | 3.2378e-05 | 4.6687e-05 | 6.8606e-05 |   0.0 |  1.75
+Comm    | 0.0011719  | 0.0013134  | 0.0014279  |   0.2 | 49.33
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.000588   |            |       | 25.04
+Other   |            | 0.0005804  |            |       | 21.80
 
 Nlocal:       0.285714 ave           1 max           0 min
 Histogram: 10 0 0 0 0 0 0 0 0 4
@@ -131,9 +131,9 @@ Per MPI rank memory allocation (min/avg/max) = 4.231 | 4.517 | 5.231 Mbytes
    Step         PotEng          Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz           Volume         c_mype    
         20  -13.442777      5.9403618e-10  5.9848949e-10  5.8422018e-10  8.7875012e-13 -3.1655341e-12 -4.8562724e-12  4.032          4.032          4.032          65.548321     -13.442777    
         21  -13.442777     -1.8939414e-10 -1.9466497e-10 -1.7263618e-10 -8.8115216e-13  1.0271106e-12 -1.6395717e-12  4.032          4.032          4.032          65.548321     -13.442777    
-Loop time of 0.00208412 on 14 procs for 1 steps with 4 atoms
+Loop time of 0.00264431 on 14 procs for 1 steps with 4 atoms
 
-99.8% CPU use with 14 MPI tasks x no OpenMP threads
+100.0% CPU use with 14 MPI tasks x no OpenMP threads
 
 Minimization stats:
   Stopping criterion = force tolerance
@@ -147,12 +147,12 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.00059993 | 0.00066043 | 0.00069968 |   0.0 | 31.69
-Neigh   | 3.8937e-05 | 5.5876e-05 | 0.00010356 |   0.0 |  2.68
-Comm    | 0.00090848 | 0.00094326 | 0.00099522 |   0.0 | 45.26
+Pair    | 0.00047626 | 0.00052257 | 0.00056798 |   0.0 | 19.76
+Neigh   | 3.9804e-05 | 4.9368e-05 | 6.5583e-05 |   0.0 |  1.87
+Comm    | 0.0014447  | 0.0015279  | 0.0016029  |   0.1 | 57.78
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0004246  |            |       | 20.37
+Other   |            | 0.0005444  |            |       | 20.59
 
 Nlocal:       0.285714 ave           1 max           0 min
 Histogram: 10 0 0 0 0 0 0 0 0 4

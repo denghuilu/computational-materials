@@ -1,0 +1,8 @@
+/tmp/tmp1c1mpyxt/meam-apex-joint-s0a5z/confs/fcc-Al-surface-00--post/workdir/tmp/inputs/artifacts/input_all/tmp/tmp2shfis1l/confs/fcc-Al/surface_00
+Miller_Indices: 	Surf_E(J/m^2) EpA(eV) equi_EpA(eV)
+[1, 1, 1]-task.000000:          0.867      -3.206   -3.360
+[1, 1, 0]-task.000001:          1.206      -3.142   -3.360
+[1, 0, 0]-task.000002:          1.141      -3.165   -3.360
+[2, 2, 1]-task.000003:          1.069      -3.155   -3.360
+[2, 1, 1]-task.000004:          1.105      -3.187   -3.360
+[2, 1, 0]-task.000005:          1.301      -3.112   -3.360
